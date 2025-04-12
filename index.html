@@ -3,39 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UlyBilim</title>
+    <title>UlyBilim - Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-
-    <header id="Header">
-        <h1>TeensMentor Consulting</h1>
-        <button class="LogLink" href="">Login/Registration</button>
-    </header>
-    <main>
-    <nav id="menu">
-        <a href="#section2">News</a>
-        <a href="#section3">Announcements</a>
-        <a href="#section4">Company</a>
-        <a href="#section5">Apps</a>
-        <a href="#section6">About Us</a>
-        <a href="#section7">FAQ</a>
-        <a href="#section8">Support</a>
+    <nav class="navbar">
+        <a href="index.html" class="logo">UlyBilim</a>
+        <div class="nav-links">
+            <a href="log_in.html" class="btn login-btn">Login</a>
+            <a href="registration.html" class="btn register-btn">Register</a>
+        </div>
+    </nav>
+    
+    <div class="main-menu">
+        <div class="menu-links">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">News</a>
+            <a href="#" class="nav-link">Announcements</a>
+            <a href="#" class="nav-link">Company</a>
+            <a href="#" class="nav-link">Apps</a>
+            <a href="About us.html" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">FAQ</a>
+            <a href="#" class="nav-link">Support</a>
+        </div>
         <div class="search-container">
             <input type="text" placeholder="Search..." class="search-input">
             <button class="search-button">Search</button>
-    </nav>
-    <section id="MainContent">
-        <h2>Welcome to UlyBilim</h2>
-        <p>UlyBilim is a platform that connects students and universities.</p>
-        <p>Here you can find information about universities, courses, and more.</p>
-        <p>Explore our features and get started today!</p>
-        <p>For more information, please visit our <a href="#section6">About Us</a> page.</p>
-    </section> 
-    </main>
-
-    <p></p>
+        </div>
+    </div>
+    
+    <div class="hero">
+        <h1 class="hero-title">Welcome to UlyBilim</h1>
+        <p class="hero-subtitle">A modern learning management system designed for small and medium educational centers</p>
+        <a href="registration.html" class="btn">Get Started</a>
+    </div>
+    
+    <div class="main-content">
+        <h2>Transforming Education for Small and Medium Centers</h2>
+        <p>UlyBilim is a comprehensive learning management system that connects students, teachers, and educational centers. Our platform provides all the tools you need to create, manage, and deliver effective educational content.</p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <h3 class="feature-title">Course Management</h3>
+                <p class="feature-description">Easily create and organize courses, add materials, and track student progress all in one place.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Analytics & Reporting</h3>
+                <p class="feature-description">Get valuable insights into student performance and course effectiveness with detailed analytics.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔔</div>
+                <h3 class="feature-title">Announcements & Notifications</h3>
+                <p class="feature-description">Keep everyone informed with targeted announcements and automated notifications.</p>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h3 class="cta-title">Ready to enhance your educational center?</h3>
+            <p class="cta-description">Join hundreds of educational centers that are already using UlyBilim to improve their teaching capabilities and student engagement.</p>
+            <a href="registration.html" class="btn">Create an Account</a>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 UlyBilim. All rights reserved. A Learning Management System for educational centers.
+    </footer>
 </body>
-<footer></footer>
 </html>
