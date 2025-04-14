@@ -4,72 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UlyBilim - Homepage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="logo">UlyBilim</a>
-        <div class="nav-links">
-            <a href="log_in.html" class="btn login-btn">Login</a>
-            <a href="registration.html" class="btn register-btn">Register</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">UlyBilim</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <a href="log_in.html" class="btn btn-primary me-2">Login</a>
+                <a href="registration.html" class="btn btn-primary">Register</a>
+            </div>
         </div>
     </nav>
     
-    <div class="main-menu">
-        <div class="menu-links">
-            <a href="#" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">News</a>
-            <a href="#" class="nav-link">Announcements</a>
-            <a href="#" class="nav-link">Company</a>
-            <a href="#" class="nav-link">Apps</a>
-            <a href="About us.html" class="nav-link">About Us</a>
-            <a href="#" class="nav-link">FAQ</a>
-            <a href="#" class="nav-link">Support</a>
-        </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search..." class="search-input">
-            <button class="search-button">Search</button>
+    <div class="container mt-3">
+        <div class="card shadow-sm">
+            <div class="card-body py-2">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Announcements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Company</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Apps</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
-    <div class="hero">
-        <h1 class="hero-title">Welcome to UlyBilim</h1>
-        <p class="hero-subtitle">A modern learning management system designed for small and medium educational centers</p>
-        <a href="registration.html" class="btn">Get Started</a>
-    </div>
-    
-    <div class="main-content">
-        <h2>Transforming Education for Small and Medium Centers</h2>
-        <p>UlyBilim is a comprehensive learning management system that connects students, teachers, and educational centers. Our platform provides all the tools you need to create, manage, and deliver effective educational content.</p>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">📚</div>
-                <h3 class="feature-title">Course Management</h3>
-                <p class="feature-description">Easily create and organize courses, add materials, and track student progress all in one place.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">📊</div>
-                <h3 class="feature-title">Analytics & Reporting</h3>
-                <p class="feature-description">Get valuable insights into student performance and course effectiveness with detailed analytics.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🔔</div>
-                <h3 class="feature-title">Announcements & Notifications</h3>
-                <p class="feature-description">Keep everyone informed with targeted announcements and automated notifications.</p>
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to UlyBilim</h1>
+            <p class="lead mx-auto" style="max-width: 700px;">A modern learning management system designed for small and medium educational centers</p>
+            <a href="register.html" class="btn btn-light mt-3">Get Started</a>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="mb-4">Transforming Education for Small and Medium Centers</h2>
+                <p class="lead">UlyBilim is a comprehensive learning management system that connects students, teachers, and educational centers. Our platform provides all the tools you need to create, manage, and deliver effective educational content.</p>
+                
+                <div class="row mt-5 g-4">
+                    <div class="col-md-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <h3 class="card-title h5 fw-bold">Course Management</h3>
+                                <p class="card-text text-muted">Easily create and organize courses, add materials, and track student progress all in one place.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-graph-up"></i>
+                                </div>
+                                <h3 class="card-title h5 fw-bold">Analytics & Reporting</h3>
+                                <p class="card-text text-muted">Get valuable insights into student performance and course effectiveness with detailed analytics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card feature-card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-bell"></i>
+                                </div>
+                                <h3 class="card-title h5 fw-bold">Announcements & Notifications</h3>
+                                <p class="card-text text-muted">Keep everyone informed with targeted announcements and automated notifications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-light p-4 text-center rounded mt-5">
+                    <h3 class="h4 fw-bold">Ready to enhance your educational center?</h3>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">Join hundreds of educational centers that are already using UlyBilim to improve their teaching capabilities and student engagement.</p>
+                    <a href="register.html" class="btn btn-primary mt-2">Create an Account</a>
+                </div>
             </div>
         </div>
-        
-        <div class="cta-section">
-            <h3 class="cta-title">Ready to enhance your educational center?</h3>
-            <p class="cta-description">Join hundreds of educational centers that are already using UlyBilim to improve their teaching capabilities and student engagement.</p>
-            <a href="registration.html" class="btn">Create an Account</a>
-        </div>
     </div>
     
-    <footer>
-        &copy; 2025 UlyBilim. All rights reserved. A Learning Management System for educational centers.
+    <footer class="bg-white py-4 mt-auto border-top">
+        <div class="container text-center">
+            <p class="text-muted mb-0">&copy; 2025 UlyBilim. All rights reserved. A Learning Management System for educational centers.</p>
+        </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
