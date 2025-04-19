@@ -64,7 +64,6 @@ body {
     top: var(--header-height);
     transition: all 0.3s;
     overflow-y: auto;
-    z-index: 1;
 }
 
 #sidebar.collapsed {

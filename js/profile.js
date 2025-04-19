@@ -5,28 +5,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const wrapper = document.querySelector('.wrapper');
     
-    // Function to handle sidebar toggle
     function toggleSidebar() {
         sidebar.classList.toggle('collapsed');
         
-        // For mobile view
         if (window.innerWidth <= 768) {
             sidebar.classList.toggle('active');
             body.classList.toggle('sidebar-active');
         }
         
-        // Give the transition time to complete
         setTimeout(() => {
-            // Force layout reflow to ensure content adjusts properly
             content.style.display = 'none';
             void content.offsetHeight; // Force reflow
             content.style.display = '';
-        }, 310); // Just after the transition completes
+        }, 310);
     }
     
     sidebarCollapse.addEventListener('click', toggleSidebar);
     
-    // Close sidebar when clicking outside on mobile
     document.addEventListener('click', function(event) {
         if (window.innerWidth <= 768 && 
             !sidebar.contains(event.target) && 
@@ -45,8 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.classList.remove('active');
             body.classList.remove('sidebar-active');
         } else {
-            // For desktop: Only restore sidebar if it wasn't manually collapsed
-            if (!sidebar.classList.contains('user-collapsed')) {
+                if (!sidebar.classList.contains('user-collapsed')) {
                 sidebar.classList.remove('collapsed');
             }
         }
