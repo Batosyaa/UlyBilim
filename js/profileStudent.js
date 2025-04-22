@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.classList.toggle('active');
             body.classList.toggle('sidebar-active');
         }
+
+        if (wrapper) {
+            wrapper.classList.toggle('');
+        }
         
         setTimeout(() => {
             content.style.display = 'none';
@@ -33,8 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Handle window resize
-    window.addEventListener('resize', function() {
+        window.addEventListener('resize', function() {
         if (window.innerWidth <= 768) {
             sidebar.classList.add('collapsed');
             sidebar.classList.remove('active');
