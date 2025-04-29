@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UlyBilim - Parent Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --bs-primary: #3b82f6;
+            --bs-primary-rgb: 59, 130, 246;
+        }
+        
+        .bg-primary {
+            background-color: var(--bs-primary) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2563eb;
+            border-color: #2563eb;
+        }
+        
+        .text-primary {
+            color: var(--bs-primary) !important;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--bs-primary);
+        }
+        
+        .dashboard-card {
+            transition: transform 0.2s ease;
+            height: 100%;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .progress-bar {
+            background-color: var(--bs-primary);
+        }
+        
+        .card-header-custom {
+            background-color: rgba(59, 130, 246, 0.1);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .table-hover tbody tr:hover {
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+        
+        .badge-subject {
+            background-color: #e0e7ff;
+            color: #4338ca;
+        }
+        
+        .badge-urgent {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        
+        .badge-upcoming {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        
+        .badge-completed {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">UlyBilim</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Parent Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <span class="me-3">Welcome, Sarah Johnson</span>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="studentSelector" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle me-1"></i> Alex Johnson
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="studentSelector">
+                            <li><a class="dropdown-item active" href="#">Alex Johnson - Grade 10</a></li>
+                            <li><a class="dropdown-item" href="#">Emma Johnson - Grade 8</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Account Settings</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 mb-0">Alex Johnson's Dashboard</h1>
+                <p class="text-muted">Grade 10 - Science Stream</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactTeacherModal">
+                    <i class="bi bi-chat-dots"></i> Contact Teacher
+                </button>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-download"></i> Reports
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-pdf"></i> Download Progress Report</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-spreadsheet"></i> Export Test Results</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-text"></i> Attendance Summary</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-3 mb-4">
+            <div class="col-md-3">
+                <div class="card dashboard-card shadow-sm">
+                    <div class="card-body text-center">
+                        <h1 class="display-4 text-primary fw-bold">87%</h1>
+                        <h6 class="text-muted">Overall Average</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card dashboard-card shadow-sm">
+                    <div class="card-body text-center">
+                        <h1 class="display-4 fw-bold text-success">93%</h1>
+                        <h6 class="text-muted">Attendance Rate</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card dashboard-card shadow-sm">
+                    <div class="card-body text-center">
+                        <h1 class="display-4 fw-bold text-warning">4</h1>
+                        <h6 class="text-muted">Upcoming Tests</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card dashboard-card shadow-sm">
+                    <div class="card-body text-center">
+                        <h1 class="display-4 fw-bold text-danger">2</h1>
+                        <h6 class="text-muted">Pending Assignments</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-header card-header-custom">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Progress Tracker</h5>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-sm btn-outline-primary active">Monthly</button>
+                                <button type="button" class="btn btn-sm btn-outline-primary">Quarterly</button>
+                                <button type="button" class="btn btn-sm btn-outline-primary">Yearly</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="progressChart" height="250"></canvas>
+                    </div>
+                </div>
+                
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header card-header-custom">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Recent Mock Test Results</h5>
+                            <a href="#" class="btn btn-sm btn-primary">View All</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Test Name</th>
+                                        <th>Date</th>
+                                        <th>Score</th>
+                                        <th>Class Average</th>
+                                        <th>Performance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="badge badge-subject">Mathematics</span></td>
+                                        <td>Calculus Mid-Term</td>
+                                        <td>Apr 24, 2025</td>
+                                        <td class="fw-bold">92/100</td>
+                                        <td>78/100</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="progress flex-grow-1" style="height: 6px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="ms-2 text-success">+14</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge badge-subject">Physics</span></td>
+                                        <td>Mechanics Quiz</td>
+                                        <td>Apr 20, 2025</td>
+                                        <td class="fw-bold">85/100</td>
+                                        <td>82/100</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="progress flex-grow-1" style="height: 6px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="ms-2 text-success">+3</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge badge-subject">Chemistry</span></td>
+                                        <td>Periodic Table Test</td>
+                                        <td>Apr 15, 2025</td>
+                                        <td class="fw-bold">78/100</td>
+                                        <td>81/100</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="progress flex-grow-1" style="height: 6px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="ms-2 text-danger">-3</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge badge-subject">English</span></td>
+                                        <td>Literature Analysis</td>
+                                        <td>Apr 10, 2025</td>
+                                        <td class="fw-bold">90/100</td>
+                                        <td>75/100</td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="progress flex-grow-1" style="height: 6px;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="ms-2 text-success">+15</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header card-header-custom">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">Attendance Summary</h5>
+                            <div class="badge bg-success">93% Overall</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Present</th>
+                                        <th>Absent</th>
+                                        <th>Late</th>
+                                        <th>Attendance Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mathematics</td>
+                                        <td>28</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 93.3%" aria-valuenow="93.3" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <small class="text-muted">93.3%</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Physics</td>
+                                        <td>29</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 96.7%" aria-valuenow="96.7" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <small class="text-muted">96.7%</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chemistry</td>
+                                        <td>27</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <small class="text-muted">90%</small>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>English</td>
+                                        <td>28</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 93.3%" aria-valuenow="93.3" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <small class="text-muted">93.3%</small>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-header card-header-custom">
+                        <h5 class="mb-0">Upcoming Deadlines</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge badge-urgent">Due Tomorrow</span>
+                                <small class="text-muted">Apr 30, 2025</small>
+                            </div>
+                            <h6 class="mt-2 mb-1">Physics Lab Report</h6>
+                            <p class="mb-0 text-muted small">Experimental data analysis on pendulum motion</p>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge badge-urgent">Due Tomorrow</span>
+                                <small class="text-muted">Apr 30, 2025</small>
+                            </div>
+                            <h6 class="mt-2 mb-1">Mathematics Assignment #7</h6>
+                            <p class="mb-0 text-muted small">Integration problems, pages 210-212</p>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge badge-upcoming">3 Days Left</span>
+                                <small class="text-muted">May 2, 2025</small>
+                            </div>
+                            <h6 class="mt-2 mb-1">English Essay</h6>
+                            <p class="mb-0 text-muted small">Analysis of themes in "The Great Gatsby"</p>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge badge-upcoming">5 Days Left</span>
+                                <small class="text-muted">May 4, 2025</small>
+                            </div>
+                            <h6 class="mt-2 mb-1">Chemistry Project</h6>
+                            <p class="mb-0 text-muted small">Group presentation on organic compounds</p>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge badge-upcoming">1 Week Left</span>
+                                <small class="text-muted">May 6, 2025</small>
+                            </div>
+                            <h6 class="mt-2 mb-1">History Research Paper</h6>
+                            <p class="mb-0 text-muted small">Impact of Industrial Revolution, min 2500 words</p>
+                        </div>
+                        <div class="list-group-item text-center py-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All Deadlines</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header card-header-custom">
+                        <h5 class="mb-0">Subject Performance</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span>Mathematics</span>
+                                <span class="fw-bold">92%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span>Physics</span>
+                                <span class="fw-bold">85%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span>Chemistry</span>
+                                <span class="fw-bold">78%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span>English</span>
+                                <span class="fw-bold">90%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span>History</span>
+                                <span class="fw-bold">82%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header card-header-custom">
+                        <h5 class="mb-0">Teacher Comments</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-primary fw-bold">Ms. Williams - Mathematics</small>
+                                <small class="text-muted">Apr 25, 2025</small>
+                            </div>
+                            <p class="mt-2 mb-0">Alex is showing excellent progress in calculus. His problem-solving skills have improved significantly this semester.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-primary fw-bold">Mr. Thompson - Physics</small>
+                                <small class="text-muted">Apr 22, 2025</small>
+                            </div>
+                            <p class="mt-2 mb-0">Alex shows great analytical thinking, but needs to work on showing all steps in problem solutions.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-primary fw-bold">Ms. Garcia - English</small>
+                                <small class="text-muted">Apr 18, 2025</small>
+                            </div>
+                            <p class="mt-2 mb-0">Excellent written analysis in the last essay. Alex has a strong understanding of literary themes and supporting evidence.</p>
+                        </div>
+                        <div class="list-group-item text-center py-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Teacher Modal -->
+    <div class="modal fade" id="contactTeacherModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Teacher</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="teacherSelect" class="form-label">Select Teacher</label>
+                        <select class="form-select" id="teacherSelect">
+                            <option>Ms. Williams - Mathematics</option>
+                            <option>Mr. Thompson - Physics</option>
+                            <option>Dr. Chen - Chemistry</option>
+                            <option>Ms. Garcia - English</option>
+                            <option>Mr. Rodriguez - History</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="messageSubject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="messageSubject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="messageContent" class="form-label">Message</label>
+                        <textarea class="form-control" id="messageContent" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-white py-3 mt-auto border-top">
+        <div class="container text-center">
+            <p class="text-muted mb-0">&copy; 2025 UlyBilim. All rights reserved. A Learning Management System for educational centers.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Progress Chart
+        const ctx = document.getElementById('progressChart').getContext('2d');
+        const progressChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
+                datasets: [
+                    {
+                        label: 'Overall Average',
+                        data: [78, 80, 82, 85, 84, 87],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Mathematics',
+                        data: [75, 78, 83, 88, 90, 92],
+                        borderColor: '#10b981',
+                        backgroundColor: 'transparent',
+                        tension: 0.4,
+                        borderDash: [3, 3]
+                    },
+                    {
+                        label: 'Physics',
+                        data: [72, 75, 80, 82, 84, 85],
+                        borderColor: '#f97316',
+                        backgroundColor: 'transparent',
+                        tension: 0.4,
+                        borderDash: [3, 3]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 60,
+                        max: 100,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
+                }
+            }
+        });
+    </script>
+</body>
+</html>
