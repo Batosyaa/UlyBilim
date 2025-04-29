@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         setTimeout(() => {
             content.style.display = 'none';
-            void content.offsetHeight;
+            void content.offsetHeight; // Force reflow
             content.style.display = '';
         }, 310);
     }
@@ -37,21 +37,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-        window.addEventListener('resize', function() {
+    // Handle window resize events
+    window.addEventListener('resize', function() {
         if (window.innerWidth <= 768) {
             sidebar.classList.add('collapsed');
             sidebar.classList.remove('active');
             body.classList.remove('sidebar-active');
         } else {
-                if (!sidebar.classList.contains('user-collapsed')) {
+            if (!sidebar.classList.contains('user-collapsed')) {
                 sidebar.classList.remove('collapsed');
             }
         }
     });
     
+    // Keep track of user-initiated collapse state
     sidebarCollapse.addEventListener('click', function() {
         if (window.innerWidth > 768) {
             sidebar.classList.toggle('user-collapsed');
+        }
+    });
+    
+    // Initialize tooltips if Bootstrap supports it
+    if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    }
+    
+    // Add active class to current page in sidebar
+    const currentLocation = location.href;
+    const menuItems = document.querySelectorAll('.sidebar-link');
+    menuItems.forEach(item => {
+        if (item.href === currentLocation) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
         }
     });
 });
