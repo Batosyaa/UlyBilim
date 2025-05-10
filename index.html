@@ -69,9 +69,181 @@
         <div class="container">
             <h1 class="display-4 fw-bold">Welcome to UlyBilim</h1>
             <p class="lead mx-auto" style="max-width: 700px;">A modern learning management system designed for small and medium educational centers</p>
-            <a href="register.html" class="btn btn-light mt-3">Get Started</a>
+            <a href="registration.html" class="btn btn-light mt-3">Get Started</a>
         </div>
     </section>
+
+    <section class="container">
+        <h2>Our Stats</h2>
+        <div id="stats-container" class="stats-grid">
+            <!-- Stats will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Check Course Eligibility</h2>
+        <div class="eligibility-checker">
+            <label for="age-input">Enter your age:</label>
+            <input type="number" id="age-input" min="1" max="120">
+            <button id="check-eligibility">Check Eligibility</button>
+            <p id="eligibility-result"></p>
+        </div>
+    </section>
+
+    <div class="container">
+        <p id="random-number">Random Course ID: Loading...</p>
+    </div>
+
+    <section class="container">
+        <h2>Dynamic Content</h2>
+        <div id="dynamic-content">
+            <!-- Will be populated by JavaScript loop -->
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Course Management</h2>
+        <div class="array-demo">
+            <div id="array-container">
+                <!-- Array content will be displayed here -->
+            </div>
+            <div class="add-course-form">
+                <input type="text" id="course-input" placeholder="Enter new course name">
+                <button id="add-to-array">Add Course</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <button id="show-progress">Show My Progress</button>
+        <div id="user-data"></div>
+    </section>
+
+    <div class="container">
+        <button id="theme-toggle">Switch to Dark Theme</button>
+    </div>
+
+    <section class="container" id="jquery-demo">
+        <h2>jQuery Will Change This Text</h2>
+        <p>This paragraph will be styled using jQuery.</p>
+        
+        <div class="jquery-controls">
+            <h3>jQuery Animations</h3>
+            <button id="jquery-fade-button">Fade Toggle</button>
+            <div id="fade-target" class="demo-box">
+                <p>This content will fade in and out</p>
+            </div>
+            
+            <button id="jquery-slide-button">Slide Toggle</button>
+            <div id="slide-target" class="demo-box">
+                <p>This content will slide up and down</p>
+            </div>
+        </div>
+        
+        <div class="jquery-dynamic">
+            <h3>Dynamic Content with jQuery</h3>
+            <button id="jquery-add-element">Add Element</button>
+            <button id="jquery-remove-element">Remove Element</button>
+            <div id="dynamic-jquery-container">
+                <!-- Dynamic content will be added here -->
+            </div>
+        </div>
+        
+        <div class="image-changer">
+            <h3>Change Image with jQuery</h3>
+            <img id="changeable-image" src="images/hero-image.jpg" alt="Changeable Image" width="300">
+            <button id="change-image">Change Image</button>
+        </div>
+    </section>
+
+    <section class="container contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name-input">Name:</label>
+                <input type="text" id="name-input" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email-input">Email:</label>
+                <input type="email" id="email-input" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="message-input">Message:</label>
+                <textarea id="message-input" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="form-result"></div>
+    </section>
+
+    <section class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    What courses do you offer? <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    We offer a wide range of courses including programming, mathematics, science, language arts, and history.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I enroll in a course? <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    You can enroll by creating an account and selecting your desired course from our catalog.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Are there any prerequisites? <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Prerequisites vary by course. Please check individual course descriptions for specific requirements.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Our Courses</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Courses</button>
+            <button class="filter-btn" data-filter="programming">Programming</button>
+            <button class="filter-btn" data-filter="math">Mathematics</button>
+            <button class="filter-btn" data-filter="science">Science</button>
+        </div>
+        <div class="courses-container">
+            <div class="course-card" data-category="programming">
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS, and JavaScript</p>
+            </div>
+            <div class="course-card" data-category="programming">
+                <h3>Python Programming</h3>
+                <p>Master Python from basics to advanced</p>
+            </div>
+            <div class="course-card" data-category="math">
+                <h3>Calculus</h3>
+                <p>Understand the fundamentals of calculus</p>
+            </div>
+            <div class="course-card" data-category="science">
+                <h3>Physics</h3>
+                <p>Explore the laws of physics</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Campus Gallery</h2>
+        <div class="gallery-container">
+            <img src="images/hero-image.jpg" alt="Campus" class="gallery-image">
+            <img src="images/course1.jpg" alt="Classroom" class="gallery-image">
+            <img src="images/course2.jpg" alt="Library" class="gallery-image">
+        </div>
+    </section>
+
+    
 
     <div class="container my-5">
         <div class="card shadow-sm">
@@ -118,7 +290,7 @@
                 <div class="bg-light p-4 text-center rounded mt-5">
                     <h3 class="h4 fw-bold">Ready to enhance your educational center?</h3>
                     <p class="text-muted mx-auto" style="max-width: 600px;">Join hundreds of educational centers that are already using UlyBilim to improve their teaching capabilities and student engagement.</p>
-                    <a href="register.html" class="btn btn-primary mt-2">Create an Account</a>
+                    <a href="registration.html" class="btn btn-primary mt-2">Create an Account</a>
                 </div>
             </div>
         </div>
@@ -131,5 +303,10 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/jquery-script.js"></script>
 </body>
 </html>
