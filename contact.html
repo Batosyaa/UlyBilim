@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UlyBilim - Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/about us.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">UlyBilim</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="log_in.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="registration.html" class="nav-link">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero text-center">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-3">Get in Touch</h1>
+            <p class="lead mx-auto" style="max-width: 700px;">We're here to help and answer any questions you might have</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Information -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 p-4">
+                    <h2 class="fw-bold mb-4">Contact Information</h2>
+                    <div class="mb-4">
+                        <h3 class="fs-5 fw-bold mb-3"><i class="bi bi-envelope me-2"></i>Email</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="mailto:support@ulybilim.com" class="text-secondary">support@ulybilim.com</a></li>
+                            <li><a href="mailto:sales@ulybilim.com" class="text-secondary">sales@ulybilim.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="fs-5 fw-bold mb-3"><i class="bi bi-phone me-2"></i>Phone</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="tel:+77751234567" class="text-secondary">+7 (775) 123-45-67</a></li>
+                            <li><a href="tel:+77751234568" class="text-secondary">+7 (775) 123-45-68</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="fs-5 fw-bold mb-3"><i class="bi bi-shield-check me-2"></i>Tech Support</h3>
+                        <a href="tech-support.html" class="btn btn-outline-primary">Open Support Portal</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Hours -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 p-4">
+                    <h2 class="fw-bold mb-4">Service Hours</h2>
+                    <div class="mb-4">
+                        <h3 class="fs-5 fw-bold mb-3">Regular Support</h3>
+                        <ul class="list-unstyled text-secondary">
+                            <li>Mon-Fri: 9:00 AM - 6:00 PM</li>
+                            <li>Saturday: 10:00 AM - 4:00 PM</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="fs-5 fw-bold mb-3">Emergency Support</h3>
+                        <p class="text-secondary">24/7 for critical system issues</p>
+                        <a href="tel:+77750987654" class="btn btn-outline-danger">Emergency Hotline</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 p-4">
+                    <h2 class="fw-bold mb-4">Social Media</h2>
+                    <div class="d-flex flex-column gap-3">
+                        <a href="https://facebook.com/ulybilim" class="btn btn-outline-primary text-start">
+                            <i class="bi bi-facebook me-2"></i>Facebook
+                        </a>
+                        <a href="https://instagram.com/ulybilim" class="btn btn-outline-danger text-start">
+                            <i class="bi bi-instagram me-2"></i>Instagram
+                        </a>
+                        <a href="https://linkedin.com/company/ulybilim" class="btn btn-outline-primary text-start">
+                            <i class="bi bi-linkedin me-2"></i>LinkedIn
+                        </a>
+                        <a href="https://t.me/ulybilim_support" class="btn btn-outline-info text-start">
+                            <i class="bi bi-telegram me-2"></i>Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card shadow-sm mt-5 p-4">
+            <h2 class="fw-bold mb-4">Send Us a Message</h2>
+            <form>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="col-12 text-end">
+                        <button type="submit" class="btn btn-primary px-4">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-white py-3 mt-auto border-top">
+        <div class="container text-center text-secondary small">
+            &copy; 2025 UlyBilim. All rights reserved. A Learning Management System for educational centers.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
