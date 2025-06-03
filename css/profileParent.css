@@ -1,0 +1,68 @@
+        :root {
+            --bs-primary: #3b82f6;
+            --bs-primary-rgb: 59, 130, 246;
+        }
+        
+        .bg-primary {
+            background-color: var(--bs-primary) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2563eb;
+            border-color: #2563eb;
+        }
+        
+        .text-primary {
+            color: var(--bs-primary) !important;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--bs-primary);
+        }
+        
+        .dashboard-card {
+            transition: transform 0.2s ease;
+            height: 100%;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .progress-bar {
+            background-color: var(--bs-primary);
+        }
+        
+        .card-header-custom {
+            background-color: rgba(59, 130, 246, 0.1);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .table-hover tbody tr:hover {
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+        
+        .badge-subject {
+            background-color: #e0e7ff;
+            color: #4338ca;
+        }
+        
+        .badge-urgent {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        
+        .badge-upcoming {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        
+        .badge-completed {
+            background-color: #d1fae5;
+            color: #065f46;
+        }

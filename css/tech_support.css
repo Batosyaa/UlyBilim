@@ -1,0 +1,33 @@
+        .chat-container {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        
+        .message {
+            max-width: 80%;
+            margin: 10px;
+            padding: 12px;
+            border-radius: 15px;
+        }
+        
+        .user-message {
+            background-color: #3b82f6;
+            color: white;
+            margin-left: auto;
+        }
+        
+        .support-message {
+            background-color: white;
+            border: 1px solid #dee2e6;
+        }
+        
+        .faq-item {
+            transition: transform 0.2s;
+        }
+        
+        .faq-item:hover {
+            transform: translateX(5px);
+        }
